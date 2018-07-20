@@ -12,4 +12,12 @@ describe('TestService', () => {
   it('should be created', inject([TestService], (service: TestService) => {
     expect(service).toBeTruthy();
   }));
+  
+  it('should have add function', inject([TestService], (service: TestService) => {
+    expect(service.add).toBeTruthy();
+  }));
+  it('add function should add correctly', inject([TestService], (service: TestService) => {
+    expect(service.add(2,3)).toEqual(5);
+  }));
+  
 });
